@@ -1,0 +1,14 @@
+.search__form {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.web__search {
+  width: 100%;
+  height: 40px;
+  padding: 0 0 0 10px;
+  border: 2px solid #b4cfdb;
+  outline: none;
+  font-size: 16px;
+  color: gray;
+}

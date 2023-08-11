@@ -18,6 +18,12 @@
   flex-basis: 20%;
 }
 
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .error {
   margin: 10px;
   text-align: center;

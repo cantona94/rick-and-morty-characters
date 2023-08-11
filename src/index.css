@@ -1,7 +1,10 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -19,4 +22,21 @@ code {
   margin: auto;
   padding: 10px;
   font-family: Tahoma, Arial, sans-serif;
+}
+
+.filter__select {
+  margin-bottom: 10px;
+  width: 25%;
+  flex-wrap: wrap;
+  background: transparent;
+  height: 35px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+@media (max-width: 924px) {
+  .filter__select {
+    width: 100%;
+    margin-bottom: 3px;
+  }
 }

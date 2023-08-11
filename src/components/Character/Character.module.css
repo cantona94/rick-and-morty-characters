@@ -1,5 +1,4 @@
 .card {
-  /* background-color: #b4cfdb; */
   padding: 0 10px;
   border-radius: 0.5rem;
   margin: 3px;
@@ -16,7 +15,7 @@
 
 .text {
   text-align: center;
-  height: 25px;
+  height: 22px;
   overflow: hidden;
 }
 
