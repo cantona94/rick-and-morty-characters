@@ -36,10 +36,6 @@ export const Popup = ({
     axiosCharacter(characterId);
   }, [characterId]);
 
-  if (!character || error) {
-    return <h2>Character not found</h2>;
-  }
-
   return (
     <div
       style={{
@@ -52,20 +48,28 @@ export const Popup = ({
         <span className={styles.close} onClick={handlerPopupClose}>
           &times;
         </span>
-        <img alt="img" src={character.image} />
-        <h2>{character.name}</h2>
-        <div className={styles.content}>Gender: {character.gender}</div>
-        <div className={styles.content}>Species: {character.species}</div>
-        <div className={styles.content}>Status: {character.status}</div>
-        <div className={styles.content}>
-          Type: {character.type ? character.type : 'Missing'}
-        </div>
-        <div className={styles.content}>
-          Location: {character.location.name}
-        </div>
-        <div className={styles.content}>
-          Number of episodes: {character.episode.length}
-        </div>
+        {error ? (
+          <h2>Character not found</h2>
+        ) : !character ? (
+          <h2>Loading...</h2>
+        ) : (
+          <>
+            <img alt="img" src={character.image} />
+            <h2>{character.name}</h2>
+            <div className={styles.content}>Gender: {character.gender}</div>
+            <div className={styles.content}>Species: {character.species}</div>
+            <div className={styles.content}>Status: {character.status}</div>
+            <div className={styles.content}>
+              Type: {character.type ? character.type : 'Missing'}
+            </div>
+            <div className={styles.content}>
+              Location: {character.location.name}
+            </div>
+            <div className={styles.content}>
+              Number of episodes: {character.episode.length}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

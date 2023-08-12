@@ -90,8 +90,10 @@ export const Home: FC = () => {
           setError={setError}
         />
       </div>
-      {!characters || error ? (
+      {error ? (
         <h1 className={styles.error}>Characters not found</h1>
+      ) : !characters ? (
+        <h1 className={styles.error}>Loading...</h1>
       ) : (
         <div className={styles.characters}>
           {characters.results.map((character) => (
