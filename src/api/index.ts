@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { IData } from '../types/types';
+import { ICharacter, IData } from '../types/types';
 
 export const axiosCharactersFromApi = (
   characterName: string,
@@ -17,4 +17,10 @@ export const axiosCharactersFromApi = (
       gender: characterGender,
     },
   });
+};
+
+export const axiosCharacterFromApi = (characterId: string) => {
+  return axios.get<ICharacter>(
+    `https://rickandmortyapi.com/api/character/${characterId}`
+  );
 };

@@ -1,11 +1,23 @@
+import { Dispatch, SetStateAction } from 'react';
 import { ICharacter } from '../../types/types';
 import styles from './Character.module.css';
 
 interface IProps {
   character: ICharacter;
+  setVisibility: Dispatch<SetStateAction<boolean>>;
+  setCharacterId: Dispatch<SetStateAction<string>>;
 }
 
-export const Character = ({ character }: IProps) => {
+export const Character = ({
+  character,
+  setVisibility,
+  setCharacterId,
+}: IProps) => {
+  const handlerPopupOpen = () => {
+    setCharacterId(String(character.id));
+    setVisibility(true);
+  };
+
   return (
     <div className={styles.card}>
       <img className={styles.img} alt="img" src={character.image} />
@@ -19,7 +31,9 @@ export const Character = ({ character }: IProps) => {
         ) : (
           <p className={styles.text}></p>
         )}
-        <button className={styles.button}>Подробно</button>
+        <button className={styles.button} onClick={handlerPopupOpen}>
+          Подробно
+        </button>
       </div>
     </div>
   );

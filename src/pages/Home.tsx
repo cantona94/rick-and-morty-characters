@@ -9,6 +9,7 @@ import {
   FilterSpecies,
   FilterStatus,
   FilterType,
+  Popup,
 } from '../components/index';
 import styles from './Home.module.css';
 
@@ -20,6 +21,8 @@ export const Home: FC = () => {
   const [characterStatus, setCharacterStatus] = useState<string>('');
   const [characterSpecies, setCharacterSpecies] = useState<string>('');
   const [characterType, setCharacterType] = useState<string>('');
+  const [visibility, setVisibility] = useState<boolean>(false);
+  const [characterId, setCharacterId] = useState<string>('');
 
   const axiosCharacters = async (
     characterName: string,
@@ -92,9 +95,22 @@ export const Home: FC = () => {
       ) : (
         <div className={styles.characters}>
           {characters.results.map((character) => (
-            <Character character={character} key={character.id} />
+            <Character
+              character={character}
+              setVisibility={setVisibility}
+              setCharacterId={setCharacterId}
+              key={character.id}
+            />
           ))}
         </div>
+      )}
+      {characterId && (
+        <Popup
+          characterId={characterId}
+          setCharacterId={setCharacterId}
+          visibility={visibility}
+          setVisibility={setVisibility}
+        />
       )}
     </>
   );

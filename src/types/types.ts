@@ -1,3 +1,8 @@
+interface ILocation {
+  name: string;
+  url: string;
+}
+
 export interface ICharacter {
   id: number;
   name: string;
@@ -6,6 +11,8 @@ export interface ICharacter {
   type: string;
   species: string;
   image: string;
+  location: ILocation;
+  episode: string[];
 }
 
 export interface IData {
