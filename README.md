@@ -11,6 +11,8 @@
 2. Install NPM packages
    ```sh
    cd rick-and-morty-characters/
+   ```
+   ```sh
    npm install
    ```
 3. Launch of the project
