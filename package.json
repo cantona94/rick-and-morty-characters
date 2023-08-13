@@ -1,6 +1,7 @@
 {
   "name": "rick-and-morty-characters",
   "version": "0.1.0",
+  "homepage": "https://cantona94.github.io/rick-and-morty-characters",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -19,6 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -40,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/json-schema": "^7.0.12",
+    "gh-pages": "^6.0.0"
   }
 }
