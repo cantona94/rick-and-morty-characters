@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rick-and-morty-characters/static/css/main.4400ef26.css",
+    "main.js": "/rick-and-morty-characters/static/js/main.ef1fa75d.js",
+    "index.html": "/rick-and-morty-characters/index.html",
+    "main.4400ef26.css.map": "/rick-and-morty-characters/static/css/main.4400ef26.css.map",
+    "main.ef1fa75d.js.map": "/rick-and-morty-characters/static/js/main.ef1fa75d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4400ef26.css",
+    "static/js/main.ef1fa75d.js"
+  ]
+}
